@@ -1,0 +1,44 @@
+# Dependabot configuration
+# Reference: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+# DAT-199: Consolidated to monthly update cycle
+
+version: 2
+updates:
+  # Python dependencies - monthly grouped updates
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "saturday"
+      time: "06:00"
+      timezone: "Australia/Perth"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "build"
+      include: "scope"
+    groups:
+      python-dependencies:
+        patterns:
+          - "*"
+
+  # GitHub Actions workflow dependencies - monthly grouped updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "saturday"
+      time: "06:00"
+      timezone: "Australia/Perth"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "build"
+      include: "scope"
+    groups:
+      github-actions-dependencies:
+        patterns:
+          - "*"

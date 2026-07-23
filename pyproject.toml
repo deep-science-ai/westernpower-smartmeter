@@ -8,7 +8,7 @@ dependencies = [
     "feather-format>=0.4.1",
     "ipykernel>=6.29.5",
     "jupyter-core>=5.7.2",
-    "jupyterlab>=4.2.5",
+    "jupyterlab>=4.4.0",
     "loguru>=0.7.2",
     "matplotlib>=3.9.2",
     "pandas>=2.2.2",
@@ -18,4 +18,5 @@ dependencies = [
     "tensorflow>=2.17.0",
     "tensorrt>=10.4.0",
     "tpot>=0.12.2",
+    "pillow>=11.0.0",
 ]
